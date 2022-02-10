@@ -16,6 +16,7 @@ RUN set -eux; \
     case "$apkArch" in \
         x86_64) rustArch='x86_64-unknown-linux-musl' ;; \
         aarch64) rustArch='aarch64-unknown-linux-musl' ;; \
+        armv7) rustArch='armv7-unknown-linux-gnueabihf' ;; \
         *) echo >&2 "unsupported architecture: $apkArch"; exit 1 ;; \
     esac; \
     \
